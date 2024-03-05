@@ -1,0 +1,70 @@
+h1{
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 30px;
+  color: #F0D9AF;
+  margin: 0px;
+  padding: 0rem;
+}
+
+h2{
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  color: #FFF;
+  margin: 0px;
+}
+
+header {
+  background-color: #414D55;
+  display: flex;
+  align-items: center;
+  position: sticky;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+}
+
+a {
+  display: inline-block;
+  text-decoration: none;
+  color:#FFF; 
+  
+}
+
+nav ul {
+  list-style:none;
+  padding: 0;
+  margin-left: 30px;  
+}
+
+nav li {
+  display: inline-block;
+  margin-right: 15px;  
+}
+
+.logo img {
+  width: 100px;
+  height: auto;
+  padding: 1rem; 
+}
+
+button{
+    font-family: "Rajdhani", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    align-items: center; 
+    text-align: center; 
+    font-size: 16px;
+    background-color: #414D55;
+    color: #FFF;
+    border: 1px solid #FFF; 
+    border-radius: 5px;
+    padding: 6px 60px;
+    width: 250px;
+    height: 40px;
+    margin-top: 15px;
+  
+}
