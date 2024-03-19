@@ -3,9 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Rainy Days</title>
-  <link rel="stylesheet" href="css/index.css">
-  <link rel="stylesheet" href="css/assets.css">
+  <title>Checkout</title>
+  <link rel="stylesheet" href="/css/index.css">
+  <link rel="stylesheet" href="/css/assets.css">
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
   <link rel="preconnect" href="https://fonts.googleapis.com"> 
@@ -20,12 +20,13 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script type="module" src="./script/index.mjs"></script>
+<script type="module" src="./script/checkout.mjs"></script>
 </head>
 <body>
   <main>
   <header>
     <div class="logo">
-      <a href="index.html"> <img src="img/RainyDays_whiteLogo.png" alt="logo"> </a>
+      <a href="index.html"> <img src="/img/RainyDays_whiteLogo.png" alt="logo"> </a>
 </div>
   <nav>
       <ul>
@@ -35,12 +36,20 @@
       </ul>
   </nav>
   </header>
-<section class="banner">
-  <div class="banner-text"><h1>Pushing The Comfort Zone</h1><h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh<br>euismod tincidunt ut laoreet dolore magna aliquam erat volutp</h2> <button>EXPLORE</button></div>  
-</section>
-<div id="jackets-display"></div>
+  
+  <main>
+      <h1>Checkout</h1>
+      <button id="clear-cart">Clear cart</button>
+      <div class="cart-counter-wrapper">
+        <div id="cart-counter" class="cart-counter-container">5</div>
+      </div>
+      <div id="cart-items-display"></div>
+    </main>
+    <footer class="page-footer">Footer content</footer>
+  </div>
 </main>
   
  
 </body>
+
 </html>
