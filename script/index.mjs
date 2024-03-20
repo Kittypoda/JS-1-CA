@@ -1,5 +1,6 @@
 import { API_RAIN_URL } from "./constants.mjs";
 import { doFetch } from "./utilitys/doFetch.mjs";
+import { addToCart } from "./utilitys/cart.mjs";
 
 function generateJacketHtml(jacket) {
   const jacketWrapper = document.createElement('div');
@@ -28,6 +29,7 @@ function generateJacketHtml(jacket) {
   jacketBuyButton.textContent = 'Buy';
   jacketBuyButton.classList.add('jacket-buy-button');
   jacketBuyButton.addEventListener('click', () => {
+    console.log('button clicked');
     addToCart(jacket);
   });
 

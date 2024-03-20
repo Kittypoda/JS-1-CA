@@ -6,7 +6,7 @@ export function getCart() {
 export function addToCart(jacket) {
   const cart = getCart();
   const itemIndex = cart.findIndex(function (currentJacket) {
-    if (game.id === currentJacket.id) {
+    if (jacket.id === currentJacket.id) {
       return true;
     }
     return false;
