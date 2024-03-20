@@ -21,6 +21,10 @@ function generateHtmlForJacket(jacket) {
   const jacketQuantity = document.createElement('div');
   jacketQuantity.textContent = 'Quantity: ' + jacket.quantity;
 
+  const jacketImageContainer = document.createElement('img');
+  jacketImageContainer.src = jacket.image.url;
+  jacketImageContainer.alt = jacket.image.alt;
+
   const jacketPrice = document.createElement('div');
   jacketPrice.textContent = 'Price: ' + jacket.price;
 
@@ -47,6 +51,7 @@ function generateHtmlForJacket(jacket) {
   quantityAdjustmentContainer.append(incrementButton, decrementButton);
 
   jacketWrapper.append(
+    jacketImageContainer,
     jacketTitle,
     jacketQuantity,
     jacketPrice,
