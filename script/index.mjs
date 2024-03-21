@@ -2,6 +2,8 @@ import { API_RAIN_URL } from "./constants.mjs";
 import { doFetch } from "./utilitys/doFetch.mjs";
 import { addToCart } from "./utilitys/cart.mjs";
 
+
+
 function generateJacketHtml(jacket) {
   const jacketWrapper = document.createElement('div');
   jacketWrapper.classList.add('jacket-wrapper');
@@ -26,16 +28,24 @@ function generateJacketHtml(jacket) {
   jacketDiscountedPrice.textContent = jacket.discountedPrice;
 
   const jacketBuyButton = document.createElement('button');
-  jacketBuyButton.textContent = 'Buy';
+  jacketBuyButton.textContent = 'Add to cart';
   jacketBuyButton.classList.add('jacket-buy-button');
   jacketBuyButton.addEventListener('click', () => {
     console.log('button clicked');
     addToCart(jacket);
   });
 
+  const jacketPageButton = document.createElement('button');
+  jacketPageButton.textContent = 'Details';
+  jacketPageButton.classList.add('jacket-page-button');
+  jacketPageButton.addEventListener('click', () => {
+    localStorage.setItem('jacket', JSON.stringify(jacket));
+  });
+
+  
 
   jacketPriceContainer.append(jacketPrice, jacketDiscountedPrice);
-  jacketContainer.append(jacketImageContainer,heading, jacketPriceContainer, jacketBuyButton);
+  jacketContainer.append(jacketImageContainer,heading, jacketPriceContainer, jacketBuyButton, jacketPageButton);
   jacketWrapper.appendChild(jacketContainer);
 
   return jacketWrapper;
