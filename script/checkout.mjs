@@ -6,7 +6,9 @@ import {
 } from './utilitys/cart.mjs';
 import { formatCurrency } from './utilitys/formatCurrency.mjs';
 
+
 const clearCartButton = document.getElementById('clear-cart');
+clearCartButton.classList.add('jacket-buy-button');
 clearCartButton.addEventListener('click', () => {
   clearCart();
   renderCheckoutPage();
@@ -21,9 +23,7 @@ function generateHtmlForJacket(jacket) {
   const jacketQuantity = document.createElement('div');
   jacketQuantity.textContent = 'Quantity: ' + jacket.quantity;
 
-  const jacketImageContainer = document.createElement('img');
-  jacketImageContainer.src = jacket.image.url;
-  jacketImageContainer.alt = jacket.image.alt;
+  
 
   const jacketPrice = document.createElement('div');
   jacketPrice.textContent = 'Price: ' + jacket.price;
@@ -36,6 +36,7 @@ function generateHtmlForJacket(jacket) {
 
   const incrementButton = document.createElement('button');
   incrementButton.textContent = '+';
+  incrementButton.classList.add('jacket-buy-button');
   incrementButton.addEventListener('click', () => {
     addToCart(jacket);
     renderCheckoutPage();
@@ -43,6 +44,7 @@ function generateHtmlForJacket(jacket) {
 
   const decrementButton = document.createElement('button');
   decrementButton.textContent = '-';
+  decrementButton.classList.add('jacket-buy-button');
   decrementButton.addEventListener('click', () => {
     removeFromCart(jacket);
     renderCheckoutPage();
@@ -51,7 +53,6 @@ function generateHtmlForJacket(jacket) {
   quantityAdjustmentContainer.append(incrementButton, decrementButton);
 
   jacketWrapper.append(
-    jacketImageContainer,
     jacketTitle,
     jacketQuantity,
     jacketPrice,
