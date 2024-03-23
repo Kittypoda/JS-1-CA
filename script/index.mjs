@@ -58,7 +58,7 @@ function generateJacketHtml(jacket) {
 
   const jacketPageButton = document.createElement('a');
   jacketPageButton.href = './html/product-page.html';
-  jacketPageButton.textContent = 'Details';
+  jacketPageButton.textContent = 'See more';
   jacketPageButton.classList.add('jacket-page-button');
   console.log('product');
   jacketPageButton.addEventListener('click', () => {

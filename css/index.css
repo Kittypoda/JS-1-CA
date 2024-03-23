@@ -7,18 +7,39 @@
   background-image: url('/img/colorful.png');
   display: flex;
   flex-direction: column;
-  text-align: center;
+  text-align: left;
   background-repeat: no-repeat;
   background-position:center;
   background-size: cover;
-  min-height: 900px;
+  min-height: 800px;
   position: sticky;  
 }
 
 .banner-text{
   position: relative;
-  top: 300px;
+  top: 200px;
+  margin: 5rem;
+  max-width: 450px;
  
+}
+
+.explore{
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  align-items: center; 
+  text-align: center; 
+  font-size: 16px;
+  background-color: #000;
+  color: #FFF;
+  border: 1px solid #000; 
+  border-radius: 5px;
+  padding: 6px 60px;
+  width: 250px;
+  height: 40px;
+  margin-top: 15px;  
+  
+
 }
 
 .jacket-wrapper{
