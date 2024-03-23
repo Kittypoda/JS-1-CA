@@ -10,9 +10,6 @@ const allGenderButton = document.getElementById('gender-all');
 
 let chosenGender = '';
 
-// 1. Create buttons for the genres
-// 2. Set the genre variable based on what was clicked
-// 3. Rerender the games
 femaleGenderButton.addEventListener('click', () => {
   chosenGender = 'Female';
   renderHomePage();

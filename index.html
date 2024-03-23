@@ -18,6 +18,9 @@
   <link href="https://fonts.googleapis.com/css2?family=Jura:wght@300&display=swap" rel="stylesheet"> 
   <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <script type="module" src="./script/index.mjs"></script>
 </head>
@@ -25,22 +28,25 @@
   <main>
   <header>
     <div class="logo">
-      <a href="index.html"> <img src="img/RainyDays_whiteLogo.png" alt="logo"> </a>
+      <a href="index.html">Rainy Days</a>
 </div>
   <nav>
       <ul>
           <li><a href="index.html">SHOP</a></li>
-          <li><a href="#">ABOUT</a></li>
-          <li><a href="/html/checkout.html">CHECKOUT</a></li>
+          <li><a href="/html/checkout.html">CART</a></li>
       </ul>
   </nav>
   </header>
 <section class="banner">
   <div class="banner-text"><h1>Pushing The Comfort Zone</h1><h2>Lorem ipsum dolor sit amet, consectetuer adipiscing elit, sed diam nonummy nibh<br>euismod tincidunt ut laoreet dolore magna aliquam erat volutp</h2> <button>EXPLORE</button></div>  
 </section>
-<button id="gender-female">Women</button>
-<button id="gender-male">Men</button>
-<button id="gender-all">All jackets</button>
+
+<div class="filter-buttons">
+  <h3>Filter by</h3> 
+  <button id="gender-female">Women</button>
+  <button id="gender-male">Men</button>
+  <button id="gender-all">All jackets</button>
+</div>
 
 
 <div id="jackets-display"></div>

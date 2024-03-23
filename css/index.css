@@ -4,14 +4,14 @@
 
 
 .banner {
-  background-image: url('/img/indexbanner.png');
+  background-image: url('/img/colorful.png');
   display: flex;
   flex-direction: column;
   text-align: center;
   background-repeat: no-repeat;
-  background-position: top;
+  background-position:center;
   background-size: cover;
-  min-height: 600px;
+  min-height: 900px;
   position: sticky;  
 }
 
@@ -40,3 +40,9 @@
  
 }
 
+.filter-buttons{
+  display: flex;
+  padding: 1rem;
+  gap: 1rem;
+  justify-content: center;
+}
