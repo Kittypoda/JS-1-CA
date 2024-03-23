@@ -4,6 +4,7 @@ import { addToCart } from "./utilitys/cart.mjs";
 
 
 
+
 function generateJacketHtml(jacket) {
   const jacketWrapper = document.createElement('div');
   jacketWrapper.classList.add('jacket-wrapper');
@@ -21,11 +22,12 @@ function generateJacketHtml(jacket) {
   jacketImageContainer.alt = jacket.image.alt;
   
 
-  const jacketPrice = document.createElement('div');
-  jacketPrice.textContent = jacket.price;
+  const jacketPrice = document.createElement('h3');
+  jacketPrice.textContent = 'Before: ' + jacket.price + ' NOK';
 
   const jacketDiscountedPrice = document.createElement('div');
-  jacketDiscountedPrice.textContent = jacket.discountedPrice;
+  jacketDiscountedPrice.textContent = 'Now: ' + jacket.discountedPrice + 'NOK';
+  jacketDiscountedPrice.classList.add('now');
 
   const jacketBuyButton = document.createElement('button');
   jacketBuyButton.textContent = 'Add to cart';
@@ -35,9 +37,11 @@ function generateJacketHtml(jacket) {
     addToCart(jacket);
   });
 
-  const jacketPageButton = document.createElement('button');
+  const jacketPageButton = document.createElement('a');
+  jacketPageButton.href = './html/product-page.html';
   jacketPageButton.textContent = 'Details';
   jacketPageButton.classList.add('jacket-page-button');
+  console.log('product');
   jacketPageButton.addEventListener('click', () => {
     localStorage.setItem('jacket', JSON.stringify(jacket));
   });
@@ -45,7 +49,7 @@ function generateJacketHtml(jacket) {
   
 
   jacketPriceContainer.append(jacketPrice, jacketDiscountedPrice);
-  jacketContainer.append(jacketImageContainer,heading, jacketPriceContainer, jacketBuyButton, jacketPageButton);
+  jacketContainer.append(heading,jacketImageContainer, jacketPriceContainer, jacketBuyButton, jacketPageButton);
   jacketWrapper.appendChild(jacketContainer);
 
   return jacketWrapper;

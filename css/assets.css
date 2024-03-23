@@ -17,6 +17,26 @@ h2{
   margin: 0px;
 }
 
+h3{
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  color: #414D55;
+  margin: 0px;
+  text-transform: uppercase;
+}
+
+.now{
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  color: green;
+  margin: 0px;
+  text-transform: uppercase;
+}
+
 header {
   background-color: #414D55;
   display: flex;
@@ -28,10 +48,9 @@ header {
 }
 
 a {
-  display: inline-block;
+
   text-decoration: none;
   color:#FFF; 
-  
 }
 
 nav ul {
@@ -58,13 +77,39 @@ button{
     align-items: center; 
     text-align: center; 
     font-size: 16px;
-    background-color: #414D55;
+    background-color: transparent;
     color: #FFF;
     border: 1px solid #FFF; 
     border-radius: 5px;
     padding: 6px 60px;
     width: 250px;
     height: 40px;
-    margin-top: 15px;
+    margin-top: 15px;  
+}
+
+.jacket-buy-button{
   
+  font-family: "Rajdhani", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center; 
+    font-size: 16px;
+    background-color: #414D55;
+    color: #FFF;
+    border-radius: 5px;
+    padding: 6px 60px;
+    margin-top: 15px
+}
+
+.jacket-page-button{
+  font-family: "Rajdhani", sans-serif;
+    font-weight: 300;
+    font-style: normal;
+    text-align: center; 
+    font-size: 16px;
+    background-color: #414D55;
+    color: #FFF;
+    border-radius: 5px;
+    padding: 8.5px 100px;
+    margin-top: 15px;
 }

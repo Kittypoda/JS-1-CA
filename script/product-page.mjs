@@ -46,18 +46,16 @@ function generatejacketPageItem (jacketItem) {
     const addToCartButton = document.createElement('button');
     addToCartButton.innerHTML = "Add jacket to cart";
     addToCartButton.href = `../html/checkout.html`; 
-    addToCartButton.classList.add('js-add-to-cart', 'cta');
+    addToCartButton.classList.add('jacket-page-button');
     addToCartButton.addEventListener('click', addToCart);
-
-    const ratingElement = document.createElement("p");
-    ratingElement.textContent = `Rating by other users: ${jacketItem.rating} points`;
+    
 
     const releasedElement = document.createElement("p");
     releasedElement.textContent = jacketItem.released;
 
     main.appendChild(jacketContainer);
     jacketContainer.append(imageElement, titleElement, descriptionElement, 
-        releasedElement, priceElement, addToCartButton, ratingElement);
+        releasedElement, priceElement, addToCartButton,);
 
     return jacketContainer;
 };
