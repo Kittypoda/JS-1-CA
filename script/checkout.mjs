@@ -78,7 +78,7 @@ function displayCartCounter() {
   const cartCounterContainer = document.getElementById('cart-counter');
   console.log(cartCounterContainer);
   const totalNumberOfItems = getTotalNumberOfItemsInCart();
-  cartCounterContainer.textContent = totalNumberOfItems;
+  cartCounterContainer.textContent = 'Items in cart: ' + totalNumberOfItems;
 }
 
 function displayTotalPrice() {
@@ -95,7 +95,18 @@ function displayTotalPrice() {
   totalPriceElement.textContent = 'Total Price: ' + formatCurrency(totalPrice);
 }
 
+const orderButton = document.getElementById('order-button');
+orderButton.textContent = 'order';
+orderButton.classList.add('jacket-buy-button');
+orderButton.addEventListener('click', () => {
+    const cart = JSON.parse(localStorage.getItem('cart'));
 
+    if (cart && cart.length > 0) {
+        alert('Order successful!');
+    }else {
+      alert('Cart empty!');
+  }
+});
 
 function renderCheckoutPage() {
   displayCartCounter();

@@ -3,6 +3,28 @@ import { doFetch } from "./utilitys/doFetch.mjs";
 import { addToCart } from "./utilitys/cart.mjs";
 
 
+const femaleGenderButton = document.getElementById('gender-female');
+const maleGenderButton = document.getElementById('gender-male');
+const allGenderButton = document.getElementById('gender-all');
+
+
+let chosenGender = '';
+
+// 1. Create buttons for the genres
+// 2. Set the genre variable based on what was clicked
+// 3. Rerender the games
+femaleGenderButton.addEventListener('click', () => {
+  chosenGender = 'Female';
+  renderHomePage();
+});
+maleGenderButton.addEventListener('click', () => {
+  chosenGender = 'Male';
+  renderHomePage();
+});
+allGenderButton.addEventListener('click', () => {
+  chosenGender = '';
+  renderHomePage();
+});
 
 
 function generateJacketHtml(jacket) {
@@ -60,6 +82,11 @@ function displayJackets(jackets) {
   console.log(jacketsDisplayContainer);
   jacketsDisplayContainer.textContent = '';
   jackets
+  .filter((jacket) => {
+    if (jacket.gender === chosenGender || chosenGender === '') {
+      return true;
+    }
+  })
   
     .forEach((jacket) => {
       const jacketHtml = generateJacketHtml(jacket);
@@ -67,12 +94,16 @@ function displayJackets(jackets) {
     });
 }
 
+
+
 async function renderHomePage() {
   const responseData = await doFetch(API_RAIN_URL);
   const jackets = responseData.data;
   console.log(jackets);
   displayJackets(jackets);
+
 }
+
 
 function main() {
   renderHomePage()
