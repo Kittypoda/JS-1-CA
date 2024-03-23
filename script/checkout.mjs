@@ -57,7 +57,7 @@ function generateHtmlForJacket(jacket) {
     jacketQuantity,
     jacketPrice,
     jacketPriceTotal,
-    quantityAdjustmentContainer,
+    quantityAdjustmentContainer,  
   );
   return jacketWrapper;
 }
@@ -81,10 +81,28 @@ function displayCartCounter() {
   cartCounterContainer.textContent = totalNumberOfItems;
 }
 
+function displayTotalPrice() {
+  const cart = JSON.parse(localStorage.getItem('cart'));
+  let totalPrice = 0;
+
+  if (cart) {
+      totalPrice = cart.reduce((total, item) => {
+          return total + (item.price * item.quantity);
+      }, 0);
+  }
+
+  const totalPriceElement = document.getElementById('total-price');
+  totalPriceElement.textContent = 'Total Price: ' + formatCurrency(totalPrice);
+}
+
+
+
 function renderCheckoutPage() {
   displayCartCounter();
   displayCartItems();
+  displayTotalPrice();
 }
+
 
 function main() {
   renderCheckoutPage();
