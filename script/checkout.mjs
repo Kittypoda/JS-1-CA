@@ -23,6 +23,10 @@ function generateHtmlForJacket(jacket) {
   const jacketQuantity = document.createElement('p');
   jacketQuantity.textContent = 'Quantity: ' + jacket.quantity;
 
+  const jacketImageContainer = document.createElement('img');
+  jacketImageContainer.src = jacket.image.url;
+  jacketImageContainer.alt = jacket.image.alt;
+
   
 
   const jacketPrice = document.createElement('p');
@@ -55,6 +59,7 @@ function generateHtmlForJacket(jacket) {
 
   jacketWrapper.append(
     jacketTitle,
+    jacketImageContainer,
     jacketQuantity,
     jacketPrice,
     jacketPriceTotal,
