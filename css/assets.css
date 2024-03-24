@@ -105,6 +105,12 @@ button{
     margin: 5px;  
 }
 
+button:hover {
+  background-color: #000;
+  color: #FFF;
+}
+
+
 .jacket-buy-button{
     font-family: "Rajdhani", sans-serif;
     font-weight: 300;
