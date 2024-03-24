@@ -45,7 +45,6 @@ export function removeFromCart(jacket) {
 
 export function clearCart() {
   localStorage.setItem('cart', JSON.stringify([]));
-  console.log('Cart has been cleared');
 }
 
 export function getTotalNumberOfItemsInCart() {

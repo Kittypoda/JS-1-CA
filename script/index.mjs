@@ -52,7 +52,6 @@ function generateJacketHtml(jacket) {
   jacketBuyButton.textContent = 'Add to cart';
   jacketBuyButton.classList.add('jacket-buy-button');
   jacketBuyButton.addEventListener('click', () => {
-    console.log('button clicked');
     addToCart(jacket);
   });
 
@@ -60,7 +59,6 @@ function generateJacketHtml(jacket) {
   jacketPageButton.href = './html/product-page.html';
   jacketPageButton.textContent = 'See more';
   jacketPageButton.classList.add('jacket-page-button');
-  console.log('product');
   jacketPageButton.addEventListener('click', () => {
     localStorage.setItem('jacket', JSON.stringify(jacket));
   });
@@ -76,7 +74,6 @@ function generateJacketHtml(jacket) {
 
 function displayJackets(jackets) {
   const jacketsDisplayContainer = document.getElementById('jackets-display');
-  console.log(jacketsDisplayContainer);
   jacketsDisplayContainer.textContent = '';
   jackets
   .filter((jacket) => {
@@ -96,7 +93,6 @@ function displayJackets(jackets) {
 async function renderHomePage() {
   const responseData = await doFetch(API_RAIN_URL);
   const jackets = responseData.data;
-  console.log(jackets);
   displayJackets(jackets);
 
 }

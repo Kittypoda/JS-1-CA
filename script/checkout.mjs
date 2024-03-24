@@ -80,7 +80,6 @@ function displayCartItems() {
 function displayCartCounter() {
   const cartCounterContainer = document.getElementById('cart-counter');
   cartCounterContainer.classList.add ('cart-counter');
-  console.log(cartCounterContainer);
   const totalNumberOfItems = getTotalNumberOfItemsInCart();
   cartCounterContainer.textContent = 'Items in cart: ' + totalNumberOfItems;
 }
