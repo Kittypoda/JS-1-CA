@@ -22,6 +22,8 @@ function generatejacketPageItem (jacketItem) {
     titleElement.classList.add('title');
     titleElement.textContent = jacketItem.title;
 
+    
+
     const descriptionElement = document.createElement("p");
     descriptionElement.textContent = jacketItem.description;
 
