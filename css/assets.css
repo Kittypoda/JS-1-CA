@@ -20,14 +20,24 @@ h2{
 
 h3{
   font-family: "Rajdhani", sans-serif;
-  font-weight: 300;
+  font-weight: 600;
   font-style: normal;
   font-size: 20px;
-  color: #414D55;
+  color: #000;
   margin: 0px;
   text-transform: uppercase;
 }
 
+p{
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 300;
+  font-style: normal;
+  font-size: 20px;
+  color: #000;
+  margin: 0px;
+  
+
+}
 .now{
   font-family: "Rajdhani", sans-serif;
   font-weight: 300;
@@ -111,7 +121,7 @@ button{
 }
 
 .jacket-page-button{
-  font-family: "Rajdhani", sans-serif;
+    font-family: "Rajdhani", sans-serif;
     font-weight: 300;
     font-style: normal;
     align-items: center; 
@@ -121,7 +131,6 @@ button{
     color: #fff;
     border: 1px solid #000; 
     border-radius: 5px;
-    padding: 8.5px 90px;
-    
+    padding: 8.5px 50px;
     margin-top: 15px;  
 }

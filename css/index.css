@@ -67,3 +67,16 @@
   gap: 1rem;
   justify-content: center;
 }
+
+.jacket-item{
+  margin: 5rem;
+  max-width: 500px;
+}
+
+.jacket-item img{
+  max-width: 650px;
+}
+
+.cart-price {
+  margin-top: 1rem;
+}
