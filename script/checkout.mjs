@@ -8,7 +8,7 @@ import { formatCurrency } from './utilitys/formatCurrency.mjs';
 
 
 const clearCartButton = document.getElementById('clear-cart');
-clearCartButton.classList.add('jacket-buy-button');
+clearCartButton.classList.add('button');
 clearCartButton.addEventListener('click', () => {
   clearCart();
   renderCheckoutPage();
@@ -36,7 +36,7 @@ function generateHtmlForJacket(jacket) {
 
   const incrementButton = document.createElement('button');
   incrementButton.textContent = '+';
-  incrementButton.classList.add('jacket-buy-button');
+  incrementButton.classList.add('button');
   incrementButton.addEventListener('click', () => {
     addToCart(jacket);
     renderCheckoutPage();
@@ -44,7 +44,7 @@ function generateHtmlForJacket(jacket) {
 
   const decrementButton = document.createElement('button');
   decrementButton.textContent = '-';
-  decrementButton.classList.add('jacket-buy-button');
+  decrementButton.classList.add('button');
   decrementButton.addEventListener('click', () => {
     removeFromCart(jacket);
     renderCheckoutPage();
@@ -96,7 +96,7 @@ function displayTotalPrice() {
 }
 
 const orderButton = document.getElementById('order-button');
-orderButton.textContent = 'order';
+orderButton.textContent = 'Place order';
 orderButton.classList.add('jacket-buy-button');
 orderButton.addEventListener('click', () => {
     const cart = JSON.parse(localStorage.getItem('cart'));

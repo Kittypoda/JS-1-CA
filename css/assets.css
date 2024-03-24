@@ -1,3 +1,5 @@
+
+
 h1{
   font-family: "Rajdhani", sans-serif;
   font-weight: 300;
@@ -98,9 +100,9 @@ button{
     border: 1px solid #000; 
     border-radius: 5px;
     padding: 6px 60px;
-    width: 250px;
+    min-width: 50px;
     height: 40px;
-    margin-top: 15px;  
+    margin: 5px;  
 }
 
 .jacket-buy-button{
