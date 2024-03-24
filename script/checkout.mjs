@@ -107,10 +107,15 @@ orderButton.addEventListener('click', () => {
     const cart = JSON.parse(localStorage.getItem('cart'));
 
     if (cart && cart.length > 0) {
+        
+        clearCart();
+        
         alert('Order successful!');
-    }else {
-      alert('Cart empty!');
-  }
+        
+        window.location.href = '/index.html'; 
+    } else {
+        alert('Your cart is empty!');
+    }
 });
 
 function renderCheckoutPage() {
