@@ -20,22 +20,22 @@ function generateHtmlForJacket(jacket) {
   const jacketTitle = document.createElement('h3');
   jacketTitle.textContent = jacket.title;
 
-  const jacketQuantity = document.createElement('div');
+  const jacketQuantity = document.createElement('p');
   jacketQuantity.textContent = 'Quantity: ' + jacket.quantity;
 
   
 
-  const jacketPrice = document.createElement('div');
+  const jacketPrice = document.createElement('p');
   jacketPrice.textContent = 'Price: ' + jacket.price;
 
-  const jacketPriceTotal = document.createElement('div');
+  const jacketPriceTotal = document.createElement('p');
   jacketPriceTotal.textContent =
     'Total: ' + formatCurrency(jacket.price * jacket.quantity);
 
-  const quantityAdjustmentContainer = document.createElement('div');
+  const quantityAdjustmentContainer = document.createElement('p');
 
   const incrementButton = document.createElement('button');
-  incrementButton.textContent = '+';
+  incrementButton.textContent = 'Add item';
   incrementButton.classList.add('button');
   incrementButton.addEventListener('click', () => {
     addToCart(jacket);
@@ -43,7 +43,7 @@ function generateHtmlForJacket(jacket) {
   });
 
   const decrementButton = document.createElement('button');
-  decrementButton.textContent = '-';
+  decrementButton.textContent = 'Remove item';
   decrementButton.classList.add('button');
   decrementButton.addEventListener('click', () => {
     removeFromCart(jacket);
@@ -76,6 +76,7 @@ function displayCartItems() {
 
 function displayCartCounter() {
   const cartCounterContainer = document.getElementById('cart-counter');
+  cartCounterContainer.classList.add ('cart-counter');
   console.log(cartCounterContainer);
   const totalNumberOfItems = getTotalNumberOfItemsInCart();
   cartCounterContainer.textContent = 'Items in cart: ' + totalNumberOfItems;
@@ -92,6 +93,7 @@ function displayTotalPrice() {
   }
 
   const totalPriceElement = document.getElementById('total-price');
+  totalPriceElement.classList.add ('cart-counter');
   totalPriceElement.textContent = 'Total Price: ' + formatCurrency(totalPrice);
 }
 
