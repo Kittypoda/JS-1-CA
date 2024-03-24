@@ -3,6 +3,7 @@ const jacketItem = JSON.parse(localStorage.getItem("jacket"));
 import { addToCart } from "./utilitys/cart.mjs"
 
 
+
 function generatejacketPageItem (jacketItem) {
 
     let main = document.querySelector("main");

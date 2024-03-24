@@ -28,6 +28,7 @@ function generateHtmlForJacket(jacket) {
   const jacketPrice = document.createElement('p');
   jacketPrice.textContent = 'Price: ' + jacket.price;
 
+
   const jacketPriceTotal = document.createElement('p');
   jacketPriceTotal.textContent =
     'Total: ' + formatCurrency(jacket.price * jacket.quantity);
